@@ -1,0 +1,27 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name = "TablesClasses.Team" table = "druzyna">
+
+        <meta attribute = "class-description">
+            This class contains TablesClasses.Team data
+        </meta>
+
+        <id name = "teamId" type = "int" column = "idDruzyny">
+            <generator class="native"/>
+        </id>
+
+        <property name = "teamName" column = "nazwaDruzyny" type = "java.lang.String"/>
+        <property name = "city" column = "miasto" type = "java.lang.String"/>
+        <property name = "foundationYear" column = "rokZalozenia" type = "int"/>
+        <property name = "division" column = "dywizja" type = "java.lang.String"/>
+        <property name = "wins" column = "zwyciestwa" type = "int"/>
+        <property name = "draws" column = "remisy" type = "int"/>
+        <property name = "losts" column = "porazki" type = "int"/>
+        <property name = "scoredPoints" column = "zdobytePunkty" type = "int"/>
+        <property name = "capitanUserId" column = "idUzytkownikaKapitana" type = "int"/>
+    </class>
+</hibernate-mapping>

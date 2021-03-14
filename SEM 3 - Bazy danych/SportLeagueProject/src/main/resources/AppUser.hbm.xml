@@ -1,0 +1,32 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name = "TablesClasses.AppUser" table = "uzytkownikaplikacji">
+
+        <meta attribute = "class-description">
+            This class contains the games details.
+        </meta>
+
+        <id name = "idUzytkownika" type = "int" column = "idUzytkownika">
+            <generator class="native"/>
+        </id>
+
+        <property name = "login" column = "login" type = "String"/>
+
+        <property name = "haslo" column = "haslo" type = "String"/>
+
+        <property name = "imie" column = "imie" type = "String"/>
+
+        <property name = "nazwisko" column = "nazwisko" type = "String"/>
+
+        <property name = "pesel" column = "pesel" type = "String"/>
+
+        <property name = "poziomUprawnien" column = "poziomUprawnien" type = "int"/>
+
+        <property name = "czyZatwierdzony" column = "czyZatwierdzony" type = "boolean"/>
+
+    </class>
+</hibernate-mapping>

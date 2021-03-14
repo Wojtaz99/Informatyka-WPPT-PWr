@@ -1,0 +1,26 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name = "TablesClasses.Match" table = "mecz">
+
+        <meta attribute = "class-description">
+            This class contains the games details.
+        </meta>
+
+        <id name = "idMeczu" type = "int" column = "idMeczu">
+            <generator class="native"/>
+        </id>
+
+        <property name = "idDruzynyPierwszej" column = "idDruzynyPierwszej" type = "String"/>
+        <property name = "idDruzynyDrugiej" column = "idDruzynyDrugiej" type = "String"/>
+        <property name = "punktyDruzynyPierwszej" column = "punktyDruzynyPierwszej" type = "int"/>
+        <property name = "punktyDruzynyDrugiej" column = "punktyDruzynyDrugiej" type = "int"/>
+        <property name = "idTurnieju" column = "idTurnieju" type = "int"/>
+        <property name = "status" column = "czyZakonczony" type = "boolean"/>
+
+
+    </class>
+</hibernate-mapping>

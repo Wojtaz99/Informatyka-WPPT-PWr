@@ -1,0 +1,23 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name = "TablesClasses.Tournament" table = "turniej">
+
+        <meta attribute = "class-description">
+            This class contains TablesClasses.Tournament data
+        </meta>
+
+        <id name = "tournamentId" type = "int" column = "idTurnieju">
+            <generator class="native"/>
+        </id>
+
+        <property name = "tournamentName" column = "nazwaTurnieju" type = "java.lang.String"/>
+        <property name = "tournamentDate" column = "dataTurnieju" type = "java.sql.Date"/>
+        <property name = "location" column = "miejsce" type = "java.lang.String"/>
+        <property name = "division" column = "dywizjaTurnieju" type = "java.lang.String"/>
+        <property name = "organizerId" column = "idOrganizatora" type = "int"/>
+    </class>
+</hibernate-mapping>
